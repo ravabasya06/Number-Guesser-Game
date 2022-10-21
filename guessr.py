@@ -16,6 +16,8 @@ def ulang():
         else:
             print("Angka yang anda tebak benar")
             break
+    if chance == 0:
+        print("Anda kehilangan kesempatan")
         
     pengulangan = input("Lakukan game lagi? ya / tidak : ")
     
