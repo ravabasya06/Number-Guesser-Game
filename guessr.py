@@ -5,15 +5,14 @@ def ulang():
     chance = int(input("Masukkan berapa kesempatan yang dapat anda lakukan : "))
     randomN = random.randint(jar1, jar2)
     
-    while chance >= 0:
+    while chance > 0:
         guessN = int(input("Tebak berapa angka yang dihasilkan : "))
         if  guessN > randomN:
             print("Angka yang anda tebak lebih besar dari yang dihasilkan")
+            chance -= 1
         elif guessN < randomN:
             print("Angka yang anda tebak lebih kecil dari yang dihasilkan")
-        elif chance == 0:
-            print("Anda kehilangan kesempatan")
-            break
+            chance -= 1
         else:
             print("Angka yang anda tebak benar")
             break
